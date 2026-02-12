@@ -5,6 +5,14 @@ export async function demographicRoutes(app: FastifyInstance) {
     app.get('/demographics/:zip', async (request, reply) => {
         const { zip } = request.params as { zip: string };
         const data = await ScraperService.getDemographics(zip);
-        return data || reply.status(404).send({ error: 'Not found' });
+
+        if (!data || data.median_income === null) {
+        return reply.status(404).send({ 
+            error: 'No demographic data found for this ZIP code',
+            zip: zip 
+        });
+    }
+
+        return data;
     });
 }
