@@ -7,7 +7,8 @@
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "ingest": "ts-node src/run-ingestion.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "smoke-test": "npx ts-node smoke-test.ts"
   },
   "repository": {
     "type": "git",
