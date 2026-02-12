@@ -53,12 +53,15 @@ export const ingestData = async () => {
                     street: data.street,
                     city: data.city,
                     state: stateName,
-                    zip_code: data.zip_code?.padStart(5, '0'), // normalize
+                    // normalizing
+                    zip_code: data.zip_code?.padStart(5, '0'), 
                     house_size: houseSize,
                     sold_date: data.sold_date,
                     state_code: stateMap[stateName] || null,
-                    price_per_sq_ft: (price > 0 && houseSize > 0) ? (price / houseSize) : null,
-                    price_per_acre: (price > 0 && acreLot > 0) ? (price / acreLot) : null
+                    // (calculated from price, acre_lot & house_size)
+                    price_per_sq_ft: (price > 0 && houseSize > 0) ? (price / houseSize) : null, 
+                    // ( calculated from price, acre_lot & house_size)
+                    price_per_acre: (price > 0 && acreLot > 0) ? (price / acreLot) : null 
                 };
 
                 rowsBatch.push(row);
