@@ -3,3 +3,5 @@ node_modules/
 
 # Ignorar archivos de entorno local (contienen credenciales, etc)
 .env
+
+houses.db*

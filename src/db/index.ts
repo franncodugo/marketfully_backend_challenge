@@ -44,5 +44,5 @@ export const initDb = () => {
     );
   `);
 
-  console.log('✅ DB initialized.');
+  console.log('DB initialized.');
 };
