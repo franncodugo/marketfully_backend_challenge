@@ -50,7 +50,7 @@ npm run dev
 
 Accede a la documentación interactiva de Swagger:
 👉 http://localhost:3000/docs
-🧪 Pruebas de Calidad (Smoke Tests)
+Pruebas de Calidad (Smoke Tests)
 
 Para validar la integridad de la base de datos, la conectividad del Scraper y el enriquecimiento de datos:
 Bash
