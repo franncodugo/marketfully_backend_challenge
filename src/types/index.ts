@@ -24,3 +24,33 @@ export interface Property {
     price_per_acre: number | null;
     zip_info?: ZipDemographics | null; 
 }
+
+export interface PropertyFilters {
+    status: 'for_sale' | 'sold' | 'ready_to_build';
+    min_price?: number;
+    max_price?: number;
+    min_bed?: number;
+    max_bed?: number;
+    min_bath?: number;
+    max_bath?: number;
+    min_acre_lot?: number;
+    max_acre_lot?: number;
+    min_house_size?: number;
+    max_house_size?: number;
+    city?: string;
+    state?: string;
+    state_code?: string;
+    zip_code?: string;
+    // Demographics
+    min_population?: number;
+    max_population?: number;
+    min_median_income?: number;
+    max_median_income?: number;
+    min_median_age?: number;
+    max_median_age?: number;
+    // Pagination & Sort
+    page?: number;
+    limit?: number;
+    sort_by?: string;
+    sort_order?: 'ASC' | 'DESC';
+}

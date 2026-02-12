@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/franncodugo/marketfully_backend_challenge#readme",
   "dependencies": {
+    "@fastify/cors": "^11.2.0",
     "axios": "^1.13.5",
     "better-sqlite3": "^12.6.2",
     "cheerio": "^1.2.0",
