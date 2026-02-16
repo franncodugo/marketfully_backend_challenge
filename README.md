@@ -57,3 +57,7 @@ Bash
 ```bash
 npm run smoke-test
 ```
+### ⚠️ Notas sobre el Scraping (ZipWho)
+El servicio `ScraperService` fue diseñado con una arquitectura de doble validación (DOM + Regex) para maximizar la resiliencia. Sin embargo, al parecer, ZipWho.com presenta ocasionalmente cierta inestabilidad o bloqueos por IP.
+- Se implementó **SQLite Caching** para mitigar esto y garantizar que la API responda de una vez obtenidos los datos.
+- En caso de un 404 persistente en un ZIP válido, es probable que la IP del servidor haya sido agregada o registrada por rate-limit desde el proveedor externo.
